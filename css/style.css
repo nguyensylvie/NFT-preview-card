@@ -1,0 +1,116 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.container .item {
+  padding: 25px 25px 10px 25px;
+  margin: 20px;
+  width: 300px;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 15px;
+}
+.container .item .item_picture {
+  position: relative;
+}
+.container .item .item_picture .item_picture_equilibrium {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.container .item .item_picture .item_picture_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: hsl(178, 100%, 50%);
+  border-radius: 10px;
+}
+.container .item .item_picture .item_picture_hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.container .item .item_picture:hover {
+  cursor: pointer;
+}
+.container .item .item_picture:hover .item_picture_overlay {
+  transition: 0.5s;
+  opacity: 0.5;
+}
+.container .item .item_picture:hover .item_picture_hover {
+  display: inline;
+}
+.container .item h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  padding-top: 5px;
+}
+.container .item .item_description {
+  font-weight: 300;
+  line-height: 26px;
+  color: hsl(215, 51%, 70%);
+}
+.container .item .item_infos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-weight: 300;
+}
+.container .item .item_infos .item_infos_eth {
+  color: hsl(178, 100%, 50%);
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+.container .item .item_infos .item_infos_daysleft {
+  color: hsl(215, 51%, 70%);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.container .item .item_infos .icon-ethereum,
+.container .item .item_infos .icon-clock {
+  padding-right: 5px;
+}
+.container .item hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid hsl(215, 32%, 27%);
+  margin: 15px 0 0 0;
+}
+.container .item .item_creation {
+  display: flex;
+  align-items: center;
+  color: hsl(215, 51%, 70%);
+  font-weight: 300;
+}
+.container .item .item_creation .avatar {
+  width: 30px;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+.container .item .item_creation .author {
+  padding-left: 15px;
+}
+.container a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+.container a:hover {
+  color: hsl(178, 100%, 50%);
+}/*# sourceMappingURL=style.css.map */

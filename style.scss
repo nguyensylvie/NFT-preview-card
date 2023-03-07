@@ -1,0 +1,128 @@
+// Colors Variables
+$white: hsl(0, 0%, 100%);
+$soft-blue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$dark-blue01: hsl(217, 54%, 11%);
+$dark-blue02: hsl(216, 50%, 16%);
+$dark-blue03: hsl(215, 32%, 27%);
+
+// Font Variable
+$outfit: "Outfit", sans-serif;
+
+//Style
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $dark-blue01;
+  font-family: $outfit;
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  .item {
+    padding: 25px 25px 10px 25px;
+    margin: 20px;
+    width: 300px;
+    background-color: $dark-blue02;
+    border-radius: 15px;
+    .item_picture {
+      position: relative;
+      .item_picture_equilibrium {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+      .item_picture_overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-color: $cyan;
+        border-radius: 10px;
+      }
+      .item_picture_hover {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+      }
+      &:hover {
+        cursor: pointer;
+        .item_picture_overlay {
+          transition: 0.5s;
+          opacity: 0.5;
+        }
+        .item_picture_hover {
+          display: inline;
+        }
+      }
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: 600;
+      color: $white;
+      padding-top: 5px;
+    }
+    .item_description {
+      font-weight: 300;
+      line-height: 26px;
+      color: $soft-blue;
+    }
+    .item_infos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      font-weight: 300;
+      .item_infos_eth {
+        color: $cyan;
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+      }
+      .item_infos_daysleft {
+        color: $soft-blue;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+      }
+      .icon-ethereum,
+      .icon-clock {
+        padding-right: 5px;
+      }
+    }
+    hr {
+      height: 1px;
+      border: 0;
+      border-top: 1px solid $dark-blue03;
+      margin: 15px 0 0 0;
+    }
+    .item_creation {
+      display: flex;
+      align-items: center;
+      color: $soft-blue;
+      font-weight: 300;
+      .avatar {
+        width: 30px;
+        border: 1px solid $white;
+        border-radius: 50%;
+      }
+      .author {
+        padding-left: 15px;
+      }
+    }
+  }
+  a {
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      color: $cyan;
+    }
+  }
+}
